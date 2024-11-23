@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Tab Title</title>
+    <script>
+        // Array of titles to cycle through
+        const titles = [
+            "listn",
+            "istn ",
+            "stn c",
+            "tn ch",
+            "n che",
+            " chea",
+            "cheat",
+            "heats",
+            "eats ",
+            "ats l",
+            "ts li",
+            "s lis",
+            " list"
+        ];
+
+        let index = 0;
+
+        // Function to change the title
+        function changeTitle() {
+            document.title = titles[index];
+            index = (index + 1) % titles.length; // Loop back to the start
+        }
+
+        // Change title every second
+        setInterval(changeTitle, 1000);
+    </script>
+</head>
+<body>
+    <h1>Dynamic Tab Title Example</h1>
+    <p>The tab title will change every second!</p>
+</body>
+</html>
